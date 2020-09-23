@@ -1,55 +1,73 @@
 ﻿<div align="center">
 
-## Allow Numerals Only<br/>by PorkNBeans
+## Allow Numerals Only
+
 
 </div>
 
 ### Description
 
 After looking here and a few other places for a simple code that allows only numerals and not to allow text to be pasted into a textbox and with no prevail I figured it out. Not a major thing but for beginners this will help them.
+ 
+### More Info
+ 
+
+
+<span>             |<span>
+---                |---
+**Submitted On**   |
+**By**             |[PorkNBeans](https://github.com/Planet-Source-Code/PSCIndex/blob/master/ByAuthor/porknbeans.md)
+**Level**          |Beginner
+**User Rating**    |4.0 (28 globes from 7 users)
+**Compatibility**  |VB 3\.0, VB 4\.0 \(16\-bit\), VB 4\.0 \(32\-bit\), VB 5\.0, VB 6\.0
+**Category**       |[String Manipulation](https://github.com/Planet-Source-Code/PSCIndex/blob/master/ByCategory/string-manipulation__1-5.md)
+**World**          |[Visual Basic](https://github.com/Planet-Source-Code/PSCIndex/blob/master/ByWorld/visual-basic.md)
+**Archive File**   |[](https://github.com/Planet-Source-Code/porknbeans-allow-numerals-only__1-30425/archive/master.zip)
+
+
+
+
 
 ### Source Code
 
-```
-'just paste this in the change section of the textbox sub<br>
+'Just Paste This in the change section of the textbox sub<BR>
 <br>
 <br>
-private sub txttext1_change()<br>
+Private Sub txtText1_Change()<br>
 'if an error should occur go to the error handler
 <br>
- on error goto txttext1_change_err
+ On Error GoTo txtText1_Change_Err
 <br>
 'if the text entered is not numeric
 <br>
-100 if not isnumeric(txttext1.text) then
+100 If Not IsNumeric(txtText1.Text) Then
 <br>
 'display the message box warning
 <br>
-102 msgbox "only numerals are allowed", vbokonly + vbexclamation, "numerals only"
+102 MsgBox "Only Numerals Are Allowed", vbOKOnly + vbExclamation, "Numerals Only"
 <br>
- end if
+ End If
 <br>
- exit sub
+ Exit Sub
 <br>
 'after handling the error and showing what line the error occured in if any
 <br>
 ' then resume the next action
 <br>
 <br>
-txttext1_change_err:
+txtText1_Change_Err:
 <br>
- msgbox err.description & vbcrlf & _
+ MsgBox Err.Description & vbCrLf & _
 <br>
-"in project1.form1.txttext1_change " & _
+"in Project1.Form1.txtText1_Change " & _
 <br>
- "at line " & erl
+ "at line " & Erl
 <br>
- resume next
+ Resume Next
 <br>
-end sub
+End Sub
 <br>
 <br>
-you could easily have the textbox clear out by adding txt.text ="" but that is so basic i figured no need to add it.
-please if theres no code like this and it does indeed help you at least give me a vote for my time sharing this.
-```
+you could easily have the textbox clear out by adding txt.text ="" but that is so basic I figured no need to add it.
+Please if theres no code like this and it does indeed help you at least give me a vote for my time sharing this.
 
